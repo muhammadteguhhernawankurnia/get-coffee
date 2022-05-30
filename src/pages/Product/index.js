@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { index as Navbar } from "../../components/Navbar";
 import "./index.css";
 import { index as Footer } from "../../components/Footer";
+import axios from "axios";
 
-const index = () => {
+const Index = () => {
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/product/all?page=1&limit=5")
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -89,4 +97,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

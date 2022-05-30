@@ -1,0 +1,76 @@
+.background-history {
+  background-image: url("../../assets/history-cust-img/history-customer-img.png");
+  background-size: cover;
+  width: 100%;
+  height: 140vh;
+}
+
+.content-history {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container .content-history .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .content-history .title .title-history {
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.container .content-history .title .sub-title-history {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+}
+
+.container .content-history .delete-btn {
+  font-weight: 200;
+  font-size: 20px;
+  text-decoration: underline;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+.container .product-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  width: 25%;
+  height: 120px;
+  border-radius: 10px;
+  text-align: left;
+  padding: 5px;
+}
+
+.container .product-item img {
+  width: 110px;
+  height: 110px;
+}
+
+.container .product-item .product-history .product-history-title {
+  font-weight: 450;
+  font-size: 20px;
+}
+
+.container .product-item .product-history .product-history-price {
+  font-weight: 300;
+  font-size: 20px;
+  color: rgba(106, 64, 41, 1);
+}
+
+.container .product-item .product-history .product-history-status {
+  font-weight: 300;
+  font-size: 20px;
+  color: rgba(106, 64, 41, 1);
+}

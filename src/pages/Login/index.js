@@ -5,8 +5,20 @@ import GoogleLogo from "../../assets/sign up images/google-logo-png-suite-everyt
 import FacebookLogo from "../../assets/sign up images/facebook-logo.png";
 import TwitterLogo from "../../assets/sign up images/twitter-logo.png";
 import InstagramLogo from "../../assets/sign up images/instagram-logo.png";
+import axios from "axios";
+import qs from "qs";
 
-const index = () => {
+const Index = () => {
+  const test = (e) => {
+    e.preventDefault();
+    axios
+      .post(
+        "http://localhost:8080/auth/",
+        qs.stringify({ email: "teskoneksi@gmail.com", password: "tes" })
+      )
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+  };
   return (
     <>
       <div className="login-content">
@@ -42,7 +54,9 @@ const index = () => {
                 placeholder="Enter your password"
               />
               <p className="forgot-password">Forgot password?</p>
-              <button className="login-btn">Login</button>
+              <button className="login-btn" onClick={(e) => test(e)}>
+                Login
+              </button>
               <button className="login-with-google-btn">
                 <img src={GoogleLogo} alt="GoggleLogo" />
                 Login with Google
@@ -120,4 +134,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
