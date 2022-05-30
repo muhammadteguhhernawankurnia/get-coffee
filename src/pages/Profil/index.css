@@ -1,0 +1,255 @@
+.profile-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-content .main-content {
+  background-image: url("../../assets/profile-images/nathan-dumlao-XOhI_kW_TaM-unsplash\ 1.png");
+  background-size: cover;
+  width: 100%;
+  height: 140vh;
+}
+
+.profile-content .main-content .title {
+  color: #fff;
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.profile-content .main-content .display-box {
+  background: rgba(248, 248, 248, 1);
+  width: 100%;
+  height: calc(140vh - 220px);
+  margin-top: 10px;
+  border-radius: 25px;
+  display: flex;
+  padding: 50px;
+}
+
+.profile-content .main-content .display-box .left-content {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.profile-content .main-content .display-box .left-content .photo-profil {
+  width: 30vh;
+  height: 30vh;
+  border-radius: 75%;
+  padding: 5px;
+  margin-left: 60px;
+  margin-right: 10px;
+}
+
+.profile-content .main-content .display-box .left-content .user-name {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.profile-content .main-content .display-box .left-content .user-email {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.profile-content .main-content .display-box .left-content .choose-photo-btn {
+  width: 75%;
+  height: 40px;
+  border: none;
+  background: rgba(255, 186, 51, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .remove-photo-btn {
+  width: 75%;
+  height: 40px;
+  border: none;
+  background: rgba(106, 64, 41, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .edit-password-btn {
+  width: 75%;
+  height: 40px;
+  border: 0.5px solid grey;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 12px;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .do-you-btn {
+  width: 75%;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 18px;
+  margin-top: 20px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .save-change-btn {
+  width: 75%;
+  height: 40px;
+  border: none;
+  background: rgba(106, 64, 41, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .cancel-btn {
+  width: 75%;
+  height: 40px;
+  border: none;
+  background: rgba(255, 186, 51, 1);
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .left-content .logout-btn {
+  width: 75%;
+  height: 40px;
+  border: 0.5px solid grey;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 15px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 12px;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-weight: 700;
+}
+
+.profile-content .main-content .display-box .right-content {
+  padding-top: 0;
+  padding-left: 25px;
+  width: 70%;
+  border-radius: 15px;
+  border-bottom: 10px solid #6a4029;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.49);
+}
+
+.profile-content .main-content .display-box .right-content .contact form {
+  display: flex;
+}
+
+.profile-content .main-content .display-box .right-content .title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  color: #4f5665;
+  padding-top: 20px;
+}
+
+.profile-content .main-content .display-box .right-content label {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #9f9f9f;
+}
+
+.profile-content .main-content .display-box .right-content input {
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #000000;
+  background-color: transparent;
+}
+
+.profile-content
+  .main-content
+  .display-box
+  .right-content
+  .contact
+  form
+  .left-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 0;
+}
+
+.profile-content
+  .main-content
+  .display-box
+  .right-content
+  .contact
+  form
+  .right-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 0;
+}
+
+.profile-content .main-content .display-box .right-content .details form {
+  display: flex;
+}
+
+.profile-content
+  .main-content
+  .display-box
+  .right-content
+  .details
+  form
+  .left-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 0;
+}
+
+.profile-content
+  .main-content
+  .display-box
+  .right-content
+  .details
+  form
+  .right-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 10px 0;
+}
+
+.profile-content .main-content .display-box .right-content .radio-gender {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}

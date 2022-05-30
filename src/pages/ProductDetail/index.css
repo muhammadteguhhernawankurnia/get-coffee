@@ -1,0 +1,106 @@
+.content-product-detail {
+  display: flex;
+  width: 100%;
+}
+
+.content-product-detail .left-content {
+  width: 50%;
+  padding: 40px;
+}
+
+.content-product-detail .left-content img {
+  width: 100%;
+  height: 700px;
+}
+
+.content-product-detail .right-content {
+  width: 50%;
+}
+
+.content-product-detail .right-content .progress-payment {
+  display: flex;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.content-product-detail .right-content .product-name {
+  font-weight: 700;
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.content-product-detail .right-content .price {
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.content-product-detail .right-content .form .size {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.content-product-detail .right-content .form .delivery {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.content-product-detail .right-content .form .selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-product-detail .right-content .form .selection .count {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.content-product-detail .right-content .form .selection .count .plus {
+  border: 0.5px solid grey;
+  height: 35px;
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.content-product-detail .right-content .form .selection .add-to-cart {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: rgba(255, 186, 51, 1);
+  color: rgba(106, 64, 41, 1);
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+}
+
+.content-product-detail .right-content .form .checkout {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: rgba(106, 64, 41, 1);
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+}

@@ -1,0 +1,136 @@
+.product-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .product-wrapper .promo-title {
+  display: flex;
+  
+} */
+
+.product-wrapper .promo-title .promo-today {
+  padding-top: 20px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.product-wrapper .coupons-will {
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+  text-align: center;
+}
+
+.product-wrapper .promo-today {
+  padding-top: 20px;
+  color: rgba(106, 64, 41, 1);
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.product-wrapper .coupons-will {
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+  text-align: center;
+}
+
+.product-wrapper .promo-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-wrapper .promo-title img {
+  width: 85px;
+  height: 94px;
+}
+
+.product-wrapper .promo-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(136, 183, 136, 1);
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+}
+
+.product-wrapper .mothers-day-1 {
+  font-weight: 100;
+  font-size: 12px;
+  text-align: left;
+}
+
+.product-wrapper .promo-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(245, 195, 97, 1);
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.product-wrapper .free-coffee {
+  font-weight: 100;
+  font-size: 12px;
+  text-align: left;
+}
+
+.product-wrapper .promo-3 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(136, 183, 136, 1);
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.product-wrapper .mothers-day-2 {
+  font-weight: 100;
+  font-size: 12px;
+  text-align: left;
+}
+
+.product-wrapper .promo-4 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: rgba(245, 195, 97, 1);
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.product-wrapper .halloween-day {
+  font-weight: 100;
+  font-size: 12px;
+  text-align: left;
+}
+
+.product-wrapper .apply-coupon-btn {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: rgba(106, 64, 41, 1);
+  cursor: pointer;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.product-wrapper .terms-and-conditions {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 20px;
+}

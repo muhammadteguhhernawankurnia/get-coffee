@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 75px;
+}
+
+.footer .product-title {
+  font-weight: 500;
+  font-size: 23px;
+}
+
+.footer .details-product {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.footer .engage-title {
+  font-weight: 500;
+  font-size: 23px;
+}
+
+.footer .details-engage {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 15px;
+}
