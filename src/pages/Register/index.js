@@ -1,12 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Register/index.css";
 import CoffeLogo from "../../assets/sign up images/coffee-1.png";
 import GoogleLogo from "../../assets/sign up images/google-logo-png-suite-everything-you-need-know-about-google-newest-0 2.png";
 import FacebookLogo from "../../assets/sign up images/facebook-logo.png";
 import TwitterLogo from "../../assets/sign up images/twitter-logo.png";
 import InstagramLogo from "../../assets/sign up images/instagram-logo.png";
+import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
-const index = () => {
+const Index = () => {
+  const navigate = useNavigate();
+
+  const [formRegister, setFormRegister] = useState({
+    email: "",
+    pass: "",
+  });
+
+  const Register = (e) => {
+    e.preventDefault();
+
+    axios
+      .post("http://localhost:8080/auth/new", formRegister)
+      .then((response) => {
+        localStorage.setItem("token", response.data.data.token);
+        navigate("/login");
+      })
+      .catch((err) => console.log(err));
+
+    setFormRegister({
+      email: "",
+      pass: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormRegister((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
   return (
     <>
       <div className="register-content">
@@ -25,21 +60,27 @@ const index = () => {
 
           {/* form   */}
           <div className="sign-up-wrapper">
-            <form className="sign-up">
+            <form className="sign-up" onSubmit={(e) => Register(e)}>
               <label htmlFor="email" className="email">
                 Email Address :
               </label>
               <input
-                id="email"
-                type="mail"
+                type="email"
+                required
+                name="email"
+                value={formRegister.email}
+                onChange={handleChange}
                 placeholder="Enter your email address"
               />
               <label htmlFor="password" className="password">
                 Password :
               </label>
               <input
-                id="password"
                 type="password"
+                required
+                value={formRegister.pass}
+                onChange={handleChange}
+                name="pass"
                 placeholder="Enter your password"
               />
               <label htmlFor="phone-number" className="phone-number">
@@ -50,7 +91,9 @@ const index = () => {
                 type="number"
                 placeholder="Enter your phone number"
               />
-              <button className="sign-up-btn">Sign Up</button>
+              <button type="submit" className="sign-up-btn">
+                Sign Up
+              </button>
               <button className="sign-up-with-google-btn">
                 <img src={GoogleLogo} alt="GoogleLogo" />
                 Sign Up with Google
@@ -128,4 +171,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

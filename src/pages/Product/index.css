@@ -1,12 +1,19 @@
 .product-wrapper {
   display: flex;
   flex-direction: row;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .product-wrapper .promo-title {
+.product-wrapper .promo-title {
   display: flex;
-  
-} */
+  /* flex-direction: column; */
+  width: 40%;
+  border-right: 1px solid #000;
+  padding: 10px;
+  margin-left: 150px;
+}
 
 .product-wrapper .promo-title .promo-today {
   padding-top: 20px;
@@ -14,6 +21,7 @@
   font-size: 35px;
   line-height: 50px;
   text-align: center;
+  width: 100%;
 }
 
 .product-wrapper .coupons-will {

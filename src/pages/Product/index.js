@@ -3,6 +3,10 @@ import { index as Navbar } from "../../components/Navbar";
 import "./index.css";
 import { index as Footer } from "../../components/Footer";
 import axios from "axios";
+import Cust1 from "../../assets/products-images/icon-customers/cus-1.png";
+import Cust2 from "../../assets/products-images/icon-customers/cus-2.png";
+import Cust3 from "../../assets/products-images/icon-customers/cus-3.png";
+import { index as ProductCart } from "../../components/ProductCart";
 
 const Index = () => {
   useEffect(() => {
@@ -17,19 +21,15 @@ const Index = () => {
       <Navbar />
       <div className="product-wrapper">
         <div className="promo-title">
+          {/* title */}
           <p className="promo-today">Promo Today</p>
           <p className="coupons-will">
             Coupons will be updated every weeks.
             <br /> Check them out!
           </p>
-        </div>
-
-        <div className="promo-title">
+          {/* title */}
           <div className="promo-1">
-            <img
-              src="assets/products-images/icon-customers/cus-1.png"
-              alt="cus-1"
-            />
+            <img src={Cust1} alt="cus-1" />
             <p className="mothers-day-1">
               <b>HAPPY MOTHERS DAY!</b>
               <br />
@@ -39,10 +39,7 @@ const Index = () => {
             </p>
           </div>
           <div className="promo-2">
-            <img
-              src="assets/products-images/icon-customers/cus-2.png"
-              alt="cus-2"
-            />
+            <img src={Cust2} alt="cus-2" />
             <p className="free-coffee">
               <b>
                 Get a cup of coffee for free
@@ -54,10 +51,7 @@ const Index = () => {
             </p>
           </div>
           <div className="promo-3">
-            <img
-              src="assets/products-images/icon-customers/cus-1.png"
-              alt="cus-3"
-            />
+            <img src={Cust3} alt="cus-3" />
             <p className="mothers-day-2">
               <b>HAPPY MOTHERS DAY!</b>
               <br />
@@ -67,10 +61,7 @@ const Index = () => {
             </p>
           </div>
           <div className="promo-4">
-            <img
-              src="assets/products-images/icon-customers/cus-3.png"
-              alt="cus-4"
-            />
+            <img src={Cust3} alt="cus-4" />
             <p className="halloween-day">
               <b>HAPPY HALLOWEEN!</b>
               <br />
@@ -91,6 +82,8 @@ const Index = () => {
             4. Should make member card to apply coupon.
           </p>
         </div>
+
+        <ProductCart />
       </div>
       <Footer />
     </>

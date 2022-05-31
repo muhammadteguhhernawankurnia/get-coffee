@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../Login/index.css";
 import CoffeeLogo from "../../assets/sign up images/coffee-1.png";
 import GoogleLogo from "../../assets/sign up images/google-logo-png-suite-everything-you-need-know-about-google-newest-0 2.png";
@@ -6,18 +6,42 @@ import FacebookLogo from "../../assets/sign up images/facebook-logo.png";
 import TwitterLogo from "../../assets/sign up images/twitter-logo.png";
 import InstagramLogo from "../../assets/sign up images/instagram-logo.png";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 // handle axios
 const Index = () => {
-  useEffect(() => {
+  const navigate = useNavigate();
+
+  const [formLogin, setFormLogin] = useState({
+    email: "",
+    pass: "",
+  });
+
+  const Login = (e) => {
+    e.preventDefault();
+
     axios
-      .post("http://localhost:8080/auth", {
-        email: "teskoneksi@gmail.com",
-        pass: "tes",
+      .post("http://localhost:8080/auth", formLogin)
+      .then((response) => {
+        localStorage.setItem("token", response.data.data.token);
+        navigate("/");
       })
-      .then((response) => console.log(response))
       .catch((err) => console.log(err));
-  }, []);
+
+    setFormLogin({
+      email: "",
+      pass: "",
+    });
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormLogin((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
 
   return (
     <>
@@ -26,7 +50,9 @@ const Index = () => {
         <div className="right-content">
           <nav>
             <div className="logo">
-              <img src={CoffeeLogo} alt="coffee-logo" />
+              <Link className="navigation" to="/">
+                <img src={CoffeeLogo} alt="coffee-logo" />
+              </Link>
               <p>Coffee Shop</p>
             </div>
             <div className="logo-login">
@@ -36,27 +62,37 @@ const Index = () => {
 
           {/* form */}
           <div className="login-wrapper">
-            <form className="login">
+            <form className="login" onSubmit={(e) => Login(e)}>
               <label htmlFor="email" className="email">
                 Email Address :
               </label>
               <input
-                id="email"
-                type="mail"
-                placeholder="Enter your email address"
+                type="email"
+                required
+                name="email"
+                value={formLogin.email}
+                onChange={handleChange}
+                placeholder="Input your email address"
               />
               <label htmlFor="password" className="password">
                 Password :
               </label>
               <input
-                id="password"
                 type="password"
-                placeholder="Enter your password"
+                required
+                value={formLogin.pass}
+                onChange={handleChange}
+                name="pass"
+                placeholder="Input Password"
               />
-              <p className="forgot-password">Forgot password?</p>
-              <button className="login-btn">Login</button>
+              <Link className="navigation" to="/forgetpassword">
+                <p className="forgot-password">Forgot password?</p>
+              </Link>
+              <button type="submit" className="login-btn">
+                Login
+              </button>
               <button className="login-with-google-btn">
-                <img src={GoogleLogo} alt="GoggleLogo" />
+                <img src={GoogleLogo} alt="GoogleLogo" />
                 Login with Google
               </button>
               <div className="question">

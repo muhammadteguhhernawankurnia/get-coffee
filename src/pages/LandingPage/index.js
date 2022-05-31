@@ -1,5 +1,5 @@
 import React from "react";
-import { index as Navbar } from "../../components/Navbar";
+import { index as NavbarHasLogin } from "../../components/NavbarHasLogin";
 import { index as Footer } from "../../components/Footer";
 import "./index.css";
 import Staff from "../../assets/home-images/icon/staff.png";
@@ -20,39 +20,39 @@ import Viez from "../../assets/home-images/photo-profil/viez-robert.png";
 const index = () => {
   return (
     <>
-      <Navbar />
+      <NavbarHasLogin />
       <div className="LP-main">
         <div className="LP-content">
           <div className="container">
             <p className="start-your">
               Start Your Day with <br /> Coffee and Good Meals
             </p>
-            <p class="we-provide">
+            <p className="we-provide">
               We provide high quality beans, good taste and healthy <br />
               meals made by love just for you. Start your day with us <br /> for
               a bigger smile!
             </p>
-            <button class="get-started-btn">Get Started</button>
+            <button className="get-started-btn">Get Started</button>
 
             {/* Content 2 */}
-            <div class="content-2">
-              <div class="staff">
+            <div className="content-2">
+              <div className="staff">
                 <img src={Staff} alt="staff" />
-                <div class="staff-text">
+                <div className="staff-text">
                   <p>90+</p>
                   <p>Staff</p>
                 </div>
               </div>
-              <div class="location">
+              <div className="location">
                 <img src={Location} alt="location" />
-                <div class="location-text">
+                <div className="location-text">
                   <p>30+</p>
                   <p>Stores</p>
                 </div>
               </div>
-              <div class="love">
+              <div className="love">
                 <img src={Love} alt="love" />
-                <div class="love-text">
+                <div className="love-text">
                   <p>800+</p>
                   <p>Customers</p>
                 </div>
