@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Login/index.css";
 import CoffeeLogo from "../../assets/sign up images/coffee-1.png";
 import GoogleLogo from "../../assets/sign up images/google-logo-png-suite-everything-you-need-know-about-google-newest-0 2.png";
@@ -6,19 +6,19 @@ import FacebookLogo from "../../assets/sign up images/facebook-logo.png";
 import TwitterLogo from "../../assets/sign up images/twitter-logo.png";
 import InstagramLogo from "../../assets/sign up images/instagram-logo.png";
 import axios from "axios";
-import qs from "qs";
 
+// handle axios
 const Index = () => {
-  const test = (e) => {
-    e.preventDefault();
+  useEffect(() => {
     axios
-      .post(
-        "http://localhost:8080/auth/",
-        qs.stringify({ email: "teskoneksi@gmail.com", password: "tes" })
-      )
-      .then((response) => response.json())
-      .catch((error) => console.log(error));
-  };
+      .post("http://localhost:8080/auth", {
+        email: "teskoneksi@gmail.com",
+        pass: "tes",
+      })
+      .then((response) => console.log(response))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
       <div className="login-content">
@@ -54,9 +54,7 @@ const Index = () => {
                 placeholder="Enter your password"
               />
               <p className="forgot-password">Forgot password?</p>
-              <button className="login-btn" onClick={(e) => test(e)}>
-                Login
-              </button>
+              <button className="login-btn">Login</button>
               <button className="login-with-google-btn">
                 <img src={GoogleLogo} alt="GoggleLogo" />
                 Login with Google
