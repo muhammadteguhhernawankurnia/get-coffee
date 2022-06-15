@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { index as Navbar } from "../../components/Navbar";
 import "./index.css";
 import { index as Footer } from "../../components/Footer";
@@ -6,15 +6,17 @@ import axios from "axios";
 import Cust1 from "../../assets/products-images/icon-customers/cus-1.png";
 import Cust2 from "../../assets/products-images/icon-customers/cus-2.png";
 import Cust3 from "../../assets/products-images/icon-customers/cus-3.png";
-import { index as ProductCart } from "../../components/ProductCart";
+import ProductCart from "../../components/ProductCart";
 
 const Index = () => {
   useEffect(() => {
     axios
-      .get("http://localhost:8080/product/all?page=1&limit=5")
-      .then((response) => response.json())
+      .get("http://localhost:8080/product/all?page=1&limit=4")
+      .then((response) => setProduct(response.data.data))
       .catch((error) => console.log(error));
   }, []);
+
+  const [product, setProduct] = useState([]);
 
   return (
     <>
@@ -83,7 +85,13 @@ const Index = () => {
           </p>
         </div>
 
-        <ProductCart />
+        {product.map((item) => {
+          return (
+            <div key={item.id}>
+              <ProductCart data={item} />
+            </div>
+          );
+        })}
       </div>
       <Footer />
     </>

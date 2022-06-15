@@ -2,7 +2,7 @@ import React from "react";
 import "./index.css";
 import CoffeeLogo from "../../assets/home-images/icon/coffee-1.png";
 import { Link } from "react-router-dom";
-import Profil from "../../assets/profile-images/photo-profil.png";
+// import Profil from "../../assets/profile-images/photo-profil.png";
 
 export const index = () => {
   return (
@@ -32,7 +32,7 @@ export const index = () => {
         <Link to="/register">
           <button className="sign-up-btn">Sign Up</button>
         </Link>
-        <img src={Profil} alt="profil"></img>
+        {/* <img src={Profil} alt="profil"></img> */}
       </div>
     </nav>
   );
